@@ -77,16 +77,16 @@ export const MovieDetailTemplate = () => {
             filter: "brightness(50%)", // Giảm độ sáng của hình ảnh
           }}
         />
-        <div className="grid grid-cols-12 gap-[30px] relative p-11">
+        <div className="grid grid-cols-12 gap-[20px] px-[10px] sm:px-[30px] relative p-11">
           <div className="lg:col-span-3 col-span-12 movieDetail_img">
             <img className="rounded-5" src={movieDetail?.hinhAnh} alt="..." />
           </div>
-          <div className="lg:col-span-9 col-span-12 movieDetail_info">
+          <div className="lg:col-span-9 col-span-12 movieDetail_info px-[20px]">
             <h3 className="mb-4 text-4xl font-600 leading-none tracking-tight text-gray-300 dark:text-white">
               {movieDetail?.tenPhim}
             </h3>
             <hr className="my-10" />
-            <p className="text-red-400 text-[20px] py-[10px]">
+            <p className="text-red-400 text-[20px] py-[10px] ">
               Mô tả :{" "}
               <span className="text-white text-[16px]">
                 {movieDetail?.moTa}
@@ -105,8 +105,8 @@ export const MovieDetailTemplate = () => {
               </span>
             </p>
             <iframe
-              className="mt-10"
-              width="100%"
+              className="mt-10 sm:w-[100%]"
+              
               height="315"
               src={movieDetail?.trailer}
               title="Embedded Video"
@@ -173,10 +173,7 @@ export const MovieDetailTemplate = () => {
         </h1>
         {showTimesDetail?.heThongRapChieu[0]?.cumRapChieu ? (
           <div className="tabDetail">
-            <Tabs
-              tabPosition="top"
-              items={returnCumRap()}
-            ></Tabs>
+            <Tabs tabPosition="top" items={returnCumRap()}></Tabs>
           </div>
         ) : (
           <NoScheduleMessage>Phim hiện chưa được công chiếu</NoScheduleMessage>

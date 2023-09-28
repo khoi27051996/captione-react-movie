@@ -29,7 +29,7 @@ export const MovieBookingTemplate = () => {
   }, [dispatch, id]);
   return (
     <div className="bookingChair">
-      <div className="px-[50px] sm:px-[100px] lg:px-[250px] xl:px-[350px]">
+      <div className="px-[10px] sm:px-[100px] lg:px-[250px] xl:px-[350px]">
         <div className="manHinh mb-[50px]"></div>
         <div className="grid grid-cols-12 px-[40px] gap-10">
           {boxOfficeList?.danhSachGhe?.map((v) => {
