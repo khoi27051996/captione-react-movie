@@ -1,0 +1,2 @@
+Phân chia công việc : Nhân làm API (Booking + listMovie)
+Khôi chỉnh sửa giao diện với responsive !
